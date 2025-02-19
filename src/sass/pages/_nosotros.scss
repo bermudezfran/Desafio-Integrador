@@ -62,17 +62,6 @@
   }
 }
 
-.about-footer {
-  background-color: variables.$color-4;
-  color: variables.$color-1;
-  text-align: center;
-  padding: 1.5rem 1rem;
-
-  &__text {
-    margin: 0;
-    font-size: 0.9rem;
-  }
-}
 
 .theme-toggle {
   position: fixed; 
@@ -87,22 +76,5 @@
   &:hover,
   &:focus {
     opacity: 0.7;
-  }
-}
-
-
-.dark-theme {
-  .about-header {
-    background-color: variables.$color-2; 
-    color: variables.$color-4;
-  }
-
-  .about-main {
-    background-color: variables.$color-3;
-    color: variables.$color-1;
-  }
-  .about-footer {
-    background-color: variables.$color-2;
-    color: variables.$color-4;
   }
 }

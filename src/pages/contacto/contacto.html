@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Car Store | Contacto</title>
+</head>
+<body>
+    <header class="main-header">
+        <input type="checkbox" id="menu" class="menu" />
+        <button class="theme-toggle" aria-label="Cambiar tema">⚫</button>
+        <nav class="nav-bar">
+          <div class="logo">
+            <img
+              src="/public/images/1000_F_483965542_8gmfwc31msG25ULS5OSx7vMzd23pOMth.jpg"
+              alt="logo de la tienda"
+            />
+          </div>
+          <ul class="nav-bar__nav-list">
+            <li>
+              <a href="/">Inicio</a>
+            </li>
+            <li>
+              <a href="../nosotros/index.html">Nosotros</a>
+            </li>
+            <li>
+              <a href="./index.html">Contacto</a>
+            </li>
+          </ul>
+          <div class="cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="40px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="black"
+            >
+              <path
+                d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"
+              />
+            </svg>
+          </div>
+        </nav>
+      </header>
+
+      <main class="contact-main">
+        <section class="contact-section">
+          <div class="contact-section__container">
+            <h1 class="contact-section__title">Contáctanos</h1>
+            <p class="contact-section__subtitle">
+              ¡Estamos aquí para resolver todas tus dudas sobre nuestros muscle cars!
+            </p>
+  
+            <!-- FORMULARIO DE CONTACTO -->
+            <form class="contact-form" action="#" method="post">
+              <div class="contact-form__field">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre completo"
+                  required
+                />
+              </div>
+  
+              <div class="contact-form__field">
+                <label for="email">Correo electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tuemail@ejemplo.com"
+                  required
+                />
+              </div>
+  
+              <div class="contact-form__field">
+                <label for="telefono">Teléfono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Ej. 1145454545"
+                />
+              </div>
+  
+              <div class="contact-form__field">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Escríbenos tu consulta o comentario"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+  
+              <button type="submit" class="contact-form__button">Enviar</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">
+          © 2025 Muscle Car Store. Todos los derechos reservados.
+        </p>
+      </footer>
+
+    <script type="module" src="./contacto.js"></script>
+</body>
+</html>

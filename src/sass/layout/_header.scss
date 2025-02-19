@@ -134,3 +134,19 @@
     }
   }
 }
+
+.dark-theme {
+  .main-header {
+    background-color: variables.$color-1;
+    .nav-bar__nav-list li a {
+      color: variables.$color-4;
+      border-bottom: 1px solid red;
+    }
+  
+    .cart svg {
+      fill: variables.$color-4;
+    }
+  }
+  
+}
+
