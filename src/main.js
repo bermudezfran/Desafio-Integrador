@@ -1,21 +1,58 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+import './sass/main.scss';
+import productos from './db/productos';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+
+const contenedor = document.getElementById('cards-container');
+
+const start = () => {
+    console.warn('Se cargó todo el HTML');
+
+    let html = '';
+
+    productos.forEach(prod => {
+        html += `
+            <div class="card">
+                <article class="card__article">
+                    <div class="card__image-container">
+                        <img class="card__image" src="${prod.foto}" alt="${prod.nombre}">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="card__heading">${prod.nombre}</h2>
+                        <div class="card__description">
+                            <p><b>${prod.precio}</b></p>
+                            <p>${prod.descripcion}</p>
+                        </div>
+                        <a class="card__boton" href="#">COMPRAR</a>
+                    </div>
+                </article>
+            </div>`;
+    });
+    contenedor.innerHTML = html;
+};
+
+window.addEventListener('DOMContentLoaded', start);
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.querySelector('.theme-toggle');
+
+  if (themeToggle) {
+      
+      if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark-theme');
+          themeToggle.textContent = '⚪';
+      }
+
+      themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-theme');
+
+          if (document.body.classList.contains('dark-theme')) {
+              themeToggle.textContent = '⚪';
+              localStorage.setItem('theme', 'dark');
+          } else {
+              themeToggle.textContent = '⚫';
+              localStorage.setItem('theme', 'light');
+          }
+      });
+  }
+});
+
+
